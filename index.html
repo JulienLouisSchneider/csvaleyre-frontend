@@ -9,30 +9,62 @@
 
   </head>
   <body>
-    <header class="bg-white/90 backdrop-blur border-b border-slate-200">
-      <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+  <header class="bg-white/90 backdrop-blur border-b border-slate-200">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex items-center justify-between gap-4">
         <div class="logo flex items-center gap-3">
           <img src="img/logo/logo-tc.png" alt="Centre Sportif de Valeyres logo" class="h-10 w-auto" />
-          <span class="text-sm font-semibold text-slate-900">Centre Sportif de Valeyres</span>
+          <a href="index.html" class="text-sm font-semibold text-slate-900">
+            Centre Sportif de Valeyres
+          </a>
         </div>
-        <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-700">
-          <li class="text-slate-900">Le Centre</li>
-          <li class="hover:text-slate-900">Actualités</li>
-          <li class="hover:text-slate-900">Présentation</li>
-          <li class="hover:text-slate-900">Groupes</li>
-          <li class="hover:text-slate-900">Sponsors</li>
-          <li class="hover:text-slate-900">Historique</li>
-          <li class="hover:text-slate-900">Réservations</li>
-          <li class="hover:text-slate-900">Tennis</li>
-          <li class="hover:text-slate-900">Bad</li>
-          <li class="hover:text-slate-900">Salle poly</li>
-          <li class="hover:text-slate-900">Restaurant</li>
-          <li class="hover:text-slate-900">Contact</li>
-        </ul>
-      </nav>
-    </header>
 
-    <main class="space-y-12">
+        <!-- Burger (mobile) -->
+        <button
+                id="menuBtn"
+                class="sm:hidden inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:text-slate-900 hover:bg-slate-100
+               focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300"
+                aria-controls="mobileMenu"
+                aria-expanded="false"
+                aria-label="Ouvrir le menu"
+        >
+          <!-- Icon burger -->
+          <svg id="iconBurger" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- Icon close -->
+          <svg id="iconClose" class="hidden h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <!-- Menu desktop -->
+        <ul class="hidden sm:flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-700">
+          <li class="hover:text-slate-900"><a href="">Nos infrastructure</a></li>
+          <li class="hover:text-slate-900"><a href="">Les NEWS</a></li>
+          <li class="hover:text-slate-900"><a href="">Salle polyvalante</a></li>
+          <li class="hover:text-slate-900"><a href="">Réservations</a></li>
+          <li class="hover:text-slate-900"><a href="">Restaurant</a></li>
+          <li class="hover:text-slate-900"><a href="">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Menu mobile (collapsible) -->
+      <div id="mobileMenu" class="sm:hidden hidden mt-4 border-t border-slate-200 pt-4">
+        <ul class="flex flex-col gap-3 text-sm font-medium text-slate-700">
+          <li><a class="block py-2 hover:text-slate-900" href="">Nos infrastructure</a></li>
+          <li><a class="block py-2 hover:text-slate-900" href="">Les NEWS</a></li>
+          <li><a class="block py-2 hover:text-slate-900" href="">Salle polyvalante</a></li>
+          <li><a class="block py-2 hover:text-slate-900" href="">Réservations</a></li>
+          <li><a class="block py-2 hover:text-slate-900" href="">Restaurant</a></li>
+          <li><a class="block py-2 hover:text-slate-900" href="">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <main class="space-y-12">
       <section
               class="bg-[url('img/CentreSportif/csm_Centre-sportif-valeyres-terrain.jpg')]
          bg-no-repeat bg-center bg-cover
@@ -200,6 +232,7 @@
           </article>
         </div>
       </section>
+
       <section class="mx-auto w-full max-w-6xl px-4 sm:px-6 py-2">
         <h2 class="text-2xl sm:text-4xl lg:text-5xl font-semibold leading-tight pb-6">
           Nous trouver
@@ -235,7 +268,88 @@
           </div>
         </article>
       </section>
-
+      <section id="sponsor" class="mx-auto w-full max-w-6xl px-4 sm:px-6 py-10">
+        <h2 class="text-2xl sm:text-4xl lg:text-5xl font-semibold leading-tight pb-6">
+          Sponsor
+        </h2>
+        <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/Auto_Center.jpg" alt="Auto Center" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/BM-EMPLOI.png" alt="BM Emploi" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/Cand-Landi.jpg" alt="Cand Landi" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/Carol-Frutiger.jpg" alt="Carol Frutiger" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/Cea_Carrelage.jpg" alt="Cea Carrelage" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/Electrotop.jpg" alt="Electrotop" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/Evasion_Peinture.jpg" alt="Evasion Peinture" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/HO_Peinture_Panneau.jpg" alt="HO Peinture Panneau" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/Jumpark.jpg" alt="Jumpark" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/La_Sante_a_Champagne.jpg" alt="La Sante a Champagne" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/TENNIS-PLUS-BLANC.jpg" alt="Tennis Plus Blanc" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/Yverdon-meubles.jpg" alt="Yverdon Meubles" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/bcv.jpg" alt="BCV" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/bouby-rolls.jpg" alt="Bouby Rolls" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/geneux-dancet.jpg" alt="Geneux Dancet" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/hbg.jpg" alt="HBG" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/hugi-sport.jpg" alt="Hugi Sport" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/kiki-pneus.jpg" alt="Kiki Pneus" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/mauron-sa.jpg" alt="Mauron SA" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/pierre-porchet.jpg" alt="Pierre Porchet" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/porchet-et-fils.jpg" alt="Porchet et Fils" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/sprint.jpg" alt="Sprint" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/stoll.jpg" alt="Stoll" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/stylroc.jpg" alt="Stylroc" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+          <li class="rounded-xl border border-slate-200 bg-white p-3 flex items-center justify-center">
+            <img src="img/sponsor/vaudoise.jpg" alt="Vaudoise" class="max-h-20 w-full object-contain" loading="lazy" />
+          </li>
+        </ul>
+      </section>
     </main>
 
     <footer class="bg-white/90 backdrop-blur border-t border-slate-200 mt-10">
@@ -365,4 +479,5 @@
 
     </footer>
   </body>
+  <script src="main.js"></script>
 </html>
