@@ -65,35 +65,26 @@
         </div>
 
         <div class="mt-6 grid gap-6 lg:grid-cols-2">
-            <!-- Photos -->
             <div class="rounded-2xl border border-slate-200 bg-white/90 backdrop-blur p-4 shadow-sm">
                 <div class="grid grid-cols-2 gap-3">
-                    <img
-                            src="../img/CentreSportif/csm_Centre-sportif-valeyres-salle-polyvalente-mariage_6913653c7e.jpg"
-                            alt="Salle polyvalente - événement / repas"
-                            class="h-40 w-full object-cover rounded-2xl"
-                            loading="lazy"
-                    />
-                    <img
-                            src="../img/CentreSportif/csm_Centre-sportif-valeyres-salle-polyvalente-mariage_6913653c7e.jpg"
-                            alt="Salle polyvalente - configuration en salle"
-                            class="h-40 w-full object-cover rounded-2xl"
-                            loading="lazy"
-                    />
-                    <img
-                            src="../img/CentreSportif/csm_Centre-sportif-valeyres-salle-polyvalente-mariage_6913653c7e.jpg"
-                            alt="Salle polyvalente - ambiance"
-                            class="h-40 w-full object-cover rounded-2xl"
-                            loading="lazy"
-                    />
-                    <img
-                            src="../img/CentreSportif/csm_Centre-sportif-valeyres-salle-polyvalente-mariage_6913653c7e.jpg"
-                            alt="Salle polyvalente - disposition"
-                            class="h-40 w-full object-cover rounded-2xl"
-                            loading="lazy"
-                    />
+                    <img src="../img/CentreSportif/csm_Centre-sportif-valeyres-salle-polyvalente-mariage_6913653c7e.jpg"
+                         alt="Salle polyvalente - événement / repas"
+                         class="js-lightbox h-40 w-full object-cover rounded-2xl cursor-zoom-in" loading="lazy" />
+
+                    <img src="../img/CentreSportif/csm_Centre-sportif-valeyres-salle-polyvalente-mariage_6913653c7e.jpg"
+                         alt="Salle polyvalente - configuration en salle"
+                         class="js-lightbox h-40 w-full object-cover rounded-2xl cursor-zoom-in" loading="lazy" />
+
+                    <img src="../img/CentreSportif/csm_Centre-sportif-valeyres-salle-polyvalente-mariage_6913653c7e.jpg"
+                         alt="Salle polyvalente - ambiance"
+                         class="js-lightbox h-40 w-full object-cover rounded-2xl cursor-zoom-in" loading="lazy" />
+
+                    <img src="../img/CentreSportif/csm_Centre-sportif-valeyres-salle-polyvalente-mariage_6913653c7e.jpg"
+                         alt="Salle polyvalente - disposition"
+                         class="js-lightbox h-40 w-full object-cover rounded-2xl cursor-zoom-in" loading="lazy" />
                 </div>
             </div>
+
 
             <!-- Points clés -->
             <div class="rounded-2xl border border-slate-200 bg-white/90 backdrop-blur p-6 shadow-sm">
@@ -386,5 +377,73 @@
     </script>
 
 </footer>
+
+<div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+    <!-- fond cliquable -->
+    <div class="absolute inset-0 bg-black/80"></div>
+
+    <!-- bouton fermer -->
+    <button
+            id="lightboxClose"
+            type="button"
+            class="absolute top-4 right-4 z-[101] rounded-lg bg-white/10 px-3 py-2 text-white hover:bg-white/20
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+            aria-label="Fermer"
+    >
+        ✕
+    </button>
+
+    <!-- image -->
+    <img
+            id="lightboxImg"
+            src=""
+            alt=""
+            class="relative z-[101] max-h-[85vh] max-w-[92vw] w-auto rounded-2xl object-contain shadow-2xl"
+    />
+</div>
+
+<script>
+    (function () {
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightboxImg");
+        const closeBtn = document.getElementById("lightboxClose");
+        const thumbs = document.querySelectorAll(".js-lightbox");
+
+        function open(src, alt) {
+            lightboxImg.src = src;
+            lightboxImg.alt = alt || "";
+            lightbox.classList.remove("hidden");
+            lightbox.classList.add("flex");
+            document.body.classList.add("overflow-hidden");
+        }
+
+        function close() {
+            lightbox.classList.add("hidden");
+            lightbox.classList.remove("flex");
+            lightboxImg.src = "";
+            document.body.classList.remove("overflow-hidden");
+        }
+
+        thumbs.forEach((img) => {
+            img.addEventListener("click", () => open(img.src, img.alt));
+        });
+
+        // Fermer avec le bouton
+        closeBtn.addEventListener("click", close);
+
+        // Fermer en cliquant ailleurs que l'image
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightboxImg) return; // clic sur l'image => ne ferme pas
+            close();
+        });
+
+        // ESC
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") close();
+        });
+    })();
+</script>
+
+
 </body>
 </html>
