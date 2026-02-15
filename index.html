@@ -44,7 +44,7 @@
           <li class="hover:text-slate-900"><a href="pages/agenda.html">Agenda</a></li>
           <li class="hover:text-slate-900"><a href="pages/party-room.html">Salle polyvalante</a></li>
           <li class="hover:text-slate-900"><a href="pages/restaurant.html">Restaurant</a></li>
-          <li class="hover:text-slate-900"><a href="">Contact</a></li>
+          <li class="hover:text-slate-900"><a href="pages/contact.html">Contact</a></li>
         </ul>
       </div>
 
@@ -58,7 +58,7 @@
           <li><a class="block py-2 hover:text-slate-900" href="pages/agenda.html">Agenda</a></li>
           <li><a class="block py-2 hover:text-slate-900" href="pages/party-room.html">Salle polyvalante</a></li>
           <li><a class="block py-2 hover:text-slate-900" href="pages/restaurant.html">Restaurant</a></li>
-          <li><a class="block py-2 hover:text-slate-900" href="">Contact</a></li>
+          <li><a class="block py-2 hover:text-slate-900" href="pages/contact.html">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -66,31 +66,38 @@
 
 
   <main class="space-y-12">
-      <section
-              class="bg-[url('img/CentreSportif/csm_Centre-sportif-valeyres-terrain.jpg')]
+    <section
+            class="relative overflow-hidden
+         bg-[url('img/CentreSportif/csm_Centre-sportif-valeyres-terrain.jpg')]
          bg-no-repeat bg-center bg-cover
          mx-auto px-4 sm:px-6
          py-16 md:py-24 min-h-[40vh]
          flex flex-col items-center justify-center
-         text-center">
+         text-center"
+    >
+      <!-- filtre noir -->
+      <div class="absolute inset-0 bg-black/55 z-0 pointer-events-none"></div>
 
-        <h2 class="text-3xl sm:text-5xl md:text-7xl text-white font-semibold">
+      <!-- contenu au-dessus -->
+      <div class="relative z-10">
+        <h2 class="text-3xl sm:text-5xl md:text-7xl text-white font-semibold drop-shadow-lg">
           Réserve ton terrain en ligne !
         </h2>
 
         <a
                 class="inline-block mt-6 rounded-xl bg-white/90 px-6 py-3 font-medium
-         transition duration-200 ease-out
-         hover:bg-white hover:scale-[1.03] hover:shadow-lg
-         focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-black/30"
+             transition duration-200 ease-out
+             hover:bg-white hover:scale-[1.03] hover:shadow-lg
+             focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-black/30"
                 href="https://online.csvaleyres.ch/tableau_int.php"
         >
           Réserver un terrain
         </a>
+      </div>
+    </section>
 
-      </section>
 
-      <section>
+    <section>
         <div class="mx-auto w-full max-w-6xl px-4 sm:px-6">
           <h2 class="text-2xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
             Bienvenue sur le site du Centre Sportif de Valeyres
