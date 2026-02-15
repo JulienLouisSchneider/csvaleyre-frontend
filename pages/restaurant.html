@@ -8,8 +8,59 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-<header>
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+  <nav class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex items-center justify-between gap-4">
+      <div class="logo flex items-center gap-3">
+        <a href="../index.html" class="flex items-center flex-row text-sm font-semibold text-slate-900">
+          <img src="../img/logo/logo-tc.png" alt="Centre Sportif de Valeyres logo" class="h-10 w-auto" />
+          <p class="px-2">Centre Sportif de Valeyres</p>
+        </a>
+      </div>
 
+      <!-- Burger (mobile) -->
+      <button
+              id="menuBtn"
+              class="sm:hidden inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:text-slate-900 hover:bg-slate-100
+               focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300"
+              aria-controls="mobileMenu"
+              aria-expanded="false"
+              aria-label="Ouvrir le menu"
+      >
+        <!-- Icon burger -->
+        <svg id="iconBurger" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <!-- Icon close -->
+        <svg id="iconClose" class="hidden h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Menu desktop -->
+      <ul class="hidden sm:flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-700">
+        <li class="hover:text-slate-900"><a href="infrastructure.html">Nos infrastructures</a></li>
+        <li class="hover:text-slate-900"><a href="agenda.html">Agenda</a></li>
+        <li class="hover:text-slate-900"><a href="party-room.html">Salle polyvalante</a></li>
+        <li class="hover:text-slate-900"><a href="restaurant.html">Restaurant</a></li>
+        <li class="hover:text-slate-900"><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div
+            id="mobileMenu"
+            class="sm:hidden hidden absolute left-0 right-0 top-full z-50 border-t border-slate-200
+             bg-white/95 backdrop-blur shadow-lg"
+    >
+      <ul class="flex flex-col gap-1 px-4 py-4 text-sm font-medium text-slate-700">
+        <li><a class="block py-2 hover:text-slate-900" href="infrastructure.html">Nos infrastructures</a></li>
+        <li><a class="block py-2 hover:text-slate-900" href="agenda.html">Agenda</a></li>
+        <li><a class="block py-2 hover:text-slate-900" href="party-room.html">Salle polyvalante</a></li>
+        <li><a class="block py-2 hover:text-slate-900" href="restaurant.html">Restaurant</a></li>
+        <li><a class="block py-2 hover:text-slate-900" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 </header>
 
 <main class="space-y-12">
@@ -441,4 +492,7 @@
     });
   })();
 </script>
+
+<script src="../main.js"></script>
+
 </html>
