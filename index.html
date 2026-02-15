@@ -9,8 +9,8 @@
 
   </head>
   <body>
-  <header class="bg-white/90 backdrop-blur border-b border-slate-200">
-    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <nav class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
       <div class="flex items-center justify-between gap-4">
         <div class="logo flex items-center gap-3">
           <img src="img/logo/logo-tc.png" alt="Centre Sportif de Valeyres logo" class="h-10 w-auto" />
@@ -40,8 +40,8 @@
 
         <!-- Menu desktop -->
         <ul class="hidden sm:flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-700">
-          <li class="hover:text-slate-900"><a href="">Nos infrastructure</a></li>
-          <li class="hover:text-slate-900"><a href="">Les NEWS</a></li>
+          <li class="hover:text-slate-900"><a href="pages/infrastructure.html">Nos infrastructures</a></li>
+          <li class="hover:text-slate-900"><a href="">Agenda</a></li>
           <li class="hover:text-slate-900"><a href="">Salle polyvalante</a></li>
           <li class="hover:text-slate-900"><a href="">Réservations</a></li>
           <li class="hover:text-slate-900"><a href="">Restaurant</a></li>
@@ -49,11 +49,14 @@
         </ul>
       </div>
 
-      <!-- Menu mobile (collapsible) -->
-      <div id="mobileMenu" class="sm:hidden hidden mt-4 border-t border-slate-200 pt-4">
-        <ul class="flex flex-col gap-3 text-sm font-medium text-slate-700">
-          <li><a class="block py-2 hover:text-slate-900" href="">Nos infrastructure</a></li>
-          <li><a class="block py-2 hover:text-slate-900" href="">Les NEWS</a></li>
+      <div
+              id="mobileMenu"
+              class="sm:hidden hidden absolute left-0 right-0 top-full z-50 border-t border-slate-200
+             bg-white/95 backdrop-blur shadow-lg"
+      >
+        <ul class="flex flex-col gap-1 px-4 py-4 text-sm font-medium text-slate-700">
+          <li><a class="block py-2 hover:text-slate-900" href="pages/infrastructure.html">Nos infrastructures</a></li>
+          <li><a class="block py-2 hover:text-slate-900" href="">Agenda</a></li>
           <li><a class="block py-2 hover:text-slate-900" href="">Salle polyvalante</a></li>
           <li><a class="block py-2 hover:text-slate-900" href="">Réservations</a></li>
           <li><a class="block py-2 hover:text-slate-900" href="">Restaurant</a></li>
@@ -121,7 +124,7 @@
             <img src="img/terrain/tennis-court-ext.svg" alt="Tennis" width="200" height="200"
                  class="w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48" />
             <p class="font-medium text-lg sm:text-xl md:text-3xl text-center">
-              4 courts terre battue
+              3 courts terre battue
             </p>
             <ul class="flex flex-col items-center font-medium text-sm sm:text-base md:text-lg">
               <li><p class="text-base sm:text-lg md:text-xl">Extérieur</p></li>
