@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Le Centre | Centre Sportif de Valeyres</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+  <nav class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex items-center justify-between gap-4">
+      <div class="logo flex items-center gap-3">
+        <a href="../index.html" class="flex items-center flex-row text-sm font-semibold text-slate-900">
+          <img src="../img/logo/logo-tc.png" alt="Centre Sportif de Valeyres logo" class="h-10 w-auto" />
+          <p class="px-2">Centre Sportif de Valeyres</p>
+        </a>
+      </div>
+
+      <!-- Burger (mobile) -->
+      <button
+              id="menuBtn"
+              class="sm:hidden inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:text-slate-900 hover:bg-slate-100
+               focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300"
+              aria-controls="mobileMenu"
+              aria-expanded="false"
+              aria-label="Ouvrir le menu"
+      >
+        <!-- Icon burger -->
+        <svg id="iconBurger" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <!-- Icon close -->
+        <svg id="iconClose" class="hidden h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Menu desktop -->
+      <ul class="hidden sm:flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-700">
+        <li class="hover:text-slate-900"><a href="infrastructure.html">Nos infrastructures</a></li>
+        <li class="hover:text-slate-900"><a href="agenda.html">Agenda</a></li>
+        <li class="hover:text-slate-900"><a href="party-room.html">Salle polyvalante</a></li>
+        <li class="hover:text-slate-900"><a href="restaurant.html">Restaurant</a></li>
+        <li class="hover:text-slate-900"><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div
+            id="mobileMenu"
+            class="sm:hidden hidden absolute left-0 right-0 top-full z-50 border-t border-slate-200
+             bg-white/95 backdrop-blur shadow-lg"
+    >
+      <ul class="flex flex-col gap-1 px-4 py-4 text-sm font-medium text-slate-700">
+        <li><a class="block py-2 hover:text-slate-900" href="infrastructure.html">Nos infrastructures</a></li>
+        <li><a class="block py-2 hover:text-slate-900" href="agenda.html">Agenda</a></li>
+        <li><a class="block py-2 hover:text-slate-900" href="party-room.html">Salle polyvalante</a></li>
+        <li><a class="block py-2 hover:text-slate-900" href="restaurant.html">Restaurant</a></li>
+        <li><a class="block py-2 hover:text-slate-900" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<main class="space-y-12">
+  <!-- HERO -->
+  <section
+          class="relative overflow-hidden
+           bg-[url('../img/CentreSportif/csm_Centre-sportif-valeyres-terrain.jpg')]
+           bg-no-repeat bg-center bg-cover
+           mx-auto px-4 sm:px-6
+           py-16 md:py-24 min-h-[35vh]
+           flex items-center justify-center text-center"
+  >
+    <div class="absolute inset-0 bg-black/55 z-0 pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-3xl mx-auto">
+      <h1 class="text-3xl sm:text-5xl md:text-6xl text-white font-semibold leading-tight drop-shadow-lg">
+        Mentions légales & protection des données
+      </h1>
+
+      <p class="mt-4 mx-auto max-w-2xl text-center text-white/90 text-base sm:text-lg drop-shadow">
+        Informations légales, hébergement, traitement des données et droits des utilisateurs.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENU -->
+  <section class="mx-auto w-full max-w-6xl px-4 sm:px-6 py-2">
+    <div class="rounded-2xl border border-slate-200 bg-white/90 backdrop-blur p-6 shadow-sm space-y-10">
+      <!-- Éditeur / Propriétaire -->
+      <section>
+        <h2 class="text-xl sm:text-2xl font-semibold text-slate-900">Propriétaire / éditeur du site</h2>
+        <div class="mt-4 space-y-2 text-sm sm:text-base text-slate-700 leading-relaxed">
+          <p>
+            Le présent site web est la propriété de la société individuelle
+            <span class="font-medium text-slate-900">Centre sportif de Valeyres-sous-Montagny Yvan Perrier</span>,
+            enregistrée au Registre Suisse du Commerce sous le numéro
+            <span class="font-medium text-slate-900">CHE-476.690.901</span>.
+          </p>
+          <p>
+            Siège social :
+            <span class="font-medium text-slate-900">Grand-Rue 3, 1441 Valeyres-Montagny, Suisse</span>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Hébergement -->
+      <section>
+        <h2 class="text-xl sm:text-2xl font-semibold text-slate-900">Hébergement</h2>
+        <div class="mt-4 space-y-2 text-sm sm:text-base text-slate-700 leading-relaxed">
+          <p>
+            Hébergeur :
+            <span class="font-medium text-slate-900">INFOMANIAK NETWORK SA</span>,
+            Rue Eugène Marziano 25, 1227 Les Acacias, Suisse.
+          </p>
+          <p>
+            Société de droit suisse enregistrée au Registre Suisse du Commerce sous le numéro
+            <span class="font-medium text-slate-900">CHE-103.167.648</span>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Protection des données -->
+      <section id="protection-donnees">
+        <h2 class="text-xl sm:text-2xl font-semibold text-slate-900">Protection des données</h2>
+
+        <div class="mt-4 space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed">
+          <p>
+            Le Centre Sportif de Valeyres s’engage à respecter votre vie privée et à traiter vos données personnelles
+            de manière confidentielle, conformément au <span class="font-medium text-slate-900">RGPD</span> et à la
+            <span class="font-medium text-slate-900">LPD suisse</span>.
+          </p>
+
+          <p>
+            Les données des clients et des utilisateurs des systèmes de réservation ne sont pas divulguées à d’autres entités.
+          </p>
+
+          <div class="rounded-2xl border border-slate-200 bg-white p-5">
+            <h3 class="text-sm font-semibold text-slate-900">Données utilisées</h3>
+            <ul class="mt-3 space-y-2 text-sm sm:text-base text-slate-700">
+              <li class="flex gap-2"><span class="text-slate-400">•</span> Données de contact (téléphone, e-mail) utilisées pour vous contacter.</li>
+              <li class="flex gap-2"><span class="text-slate-400">•</span> Envoi de newsletters (e-mailings) : désinscription possible via le lien en bas de chaque newsletter.</li>
+              <li class="flex gap-2"><span class="text-slate-400">•</span> Analyse du trafic du site : utilisation de Google Analytics.</li>
+            </ul>
+          </div>
+
+          <div class="rounded-2xl border border-slate-200 bg-white p-5">
+            <h3 class="text-sm font-semibold text-slate-900">Vos droits</h3>
+            <p class="mt-2 text-sm sm:text-base text-slate-700">
+              Conformément au RGPD et à la LPD, vous disposez notamment des droits d’accès, de rectification et de suppression
+              des données personnelles vous concernant.
+            </p>
+
+            <p class="mt-3 text-sm sm:text-base text-slate-700">
+              Exercice des droits :
+              <a class="font-medium text-slate-900 underline underline-offset-4 hover:opacity-80" href="mailto:contact@csvaleyres.ch">
+                contact@csvaleyres.ch
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+
+
+<footer class="bg-white/90 backdrop-blur border-t border-slate-200 mt-10">
+  <div class="max-w-6xl mx-auto px-8 sm:px-6 lg:px-8 py-10">
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="../img/logo/logo-tc.png" alt="Centre Sportif de Valeyres logo" class="h-10 w-auto" />
+          <span class="text-sm font-semibold text-slate-900">Centre Sportif de Valeyres</span>
+        </div>
+
+        <p class="mt-3 text-sm text-slate-600">
+          Infrastructures sportives & réservations en ligne.
+        </p>
+
+        <a
+                class="mt-4 inline-flex items-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white
+                 transition hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+                href="https://online.csvaleyres.ch/tableau_int.php"
+        >
+          Réserver un terrain
+        </a>
+      </div>
+
+      <!-- Adresse -->
+      <div>
+        <h3 class="text-sm font-semibold text-slate-900">Adresse</h3>
+        <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+          Centre Sportif de Valeyres<br />
+          <!-- Remplace par l'adresse exacte -->
+          Valeyres-sous-Montagny, VD
+        </p>
+
+        <a
+                class="mt-3 inline-block text-sm font-medium text-slate-700 hover:text-slate-900 underline underline-offset-4"
+                href="https://www.google.com/maps/search/?api=1&query=46.7974045,6.6117872"
+                target="_blank"
+                rel="noopener"
+        >
+          Ouvrir dans Google Maps
+        </a>
+      </div>
+
+      <section class="grid grid-cols-2 gap-6 auto-rows-fr md:grid-row">
+        <!-- (row 1, col 1) -->
+        <div class="p-0">
+          <h3 class="text-sm font-semibold text-slate-900">Secrétariat</h3>
+          <ul class="mt-3 space-y-2 text-sm text-slate-600">
+            <li>
+              <span class="font-medium text-slate-700">Téléphone :</span>
+              <p>
+                <a class="hover:text-slate-900" href="tel:+41244451078">024 445 10 78</a>
+              </p>
+
+            </li>
+            <li>
+              <span class="font-medium text-slate-700">E-mail :</span>
+              <a class="hover:text-slate-900" href="mailto:info@csvaleyres.ch">info@csvaleyres.ch</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- (row 1, col 2) -->
+        <div class="p-0">
+          <h3 class="text-sm font-semibold text-slate-900">Liens utiles</h3>
+          <ul class="mt-3 space-y-2 text-sm font-medium text-slate-700">
+            <li><a class="hover:text-slate-900" href="#news">Actualités</a></li>
+            <li><a class="hover:text-slate-900" href="#reservations">Réservations</a></li>
+            <li><a class="hover:text-slate-900" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- (row 2, col 1) -->
+        <div class="p-0">
+          <h3 class="text-sm font-semibold text-slate-900">Horaire</h3>
+          <ul class="mt-3 space-y-2 text-sm text-slate-600">
+            <li>
+              <span class="font-medium text-slate-700">Lun–Ven :</span>
+              <p>09:00 – 21:00</p>
+            </li>
+            <li>
+              <span class="font-medium text-slate-700">Sam–Dim :</span>
+              <p>09:00 – 20:00</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- (row 2, col 2) -->
+        <div class="p-0">
+          <h3 class="text-sm font-semibold text-slate-900">Suivez-nous</h3>
+          <a
+                  class="mt-3 inline-flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-slate-900"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Facebook"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.6 1.6-1.6h1.7V4.8c-.3 0-1.4-.1-2.7-.1-2.7 0-4.6 1.7-4.6 4.8V11H7v3h2.5v8h4z"/>
+            </svg>
+            Facebook
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="mt-10 pt-6 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <p class="text-sm text-slate-600">
+        © <span id="year"></span> Centre Sportif de Valeyres. Tous droits réservés.
+      </p>
+
+      <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-700">
+        <li><a class="hover:text-slate-900" href="legal-mention.html">Mentions légales</a></li>
+        <li><a class="hover:text-slate-900" href="#protection-donnees">Protection des données</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</footer>
+</body>
+<script src="../main.js"></script>
+</html>
